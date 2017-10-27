@@ -394,7 +394,7 @@ void get_true_random_chars(char * s,int len)
 	int size=read(random_fd.get_fd(),s,len);
 	if(size!=len)
 	{
-		printf("get random number failed\n");
+		mylog(log_fatal,"get random number failed\n");
 		exit(-1);
 	}
 }
